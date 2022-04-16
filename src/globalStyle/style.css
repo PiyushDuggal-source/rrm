@@ -1,0 +1,20 @@
+.hoverBorder {
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+}
+
+.hoverBorder:hover {
+    transform: scale(1.12);
+}
+
+.hoverBorder::after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px #019fb6;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.hoverBorder:hover::after {
+    transform: scaleX(1);
+}
