@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, H1, H2, Img } from "../../utils";
+import { Box,  Img } from "../../utils";
 import Logo from "../../assets/images/mainLogo.png";
 import { Link } from "react-router-dom";
 
@@ -8,11 +8,11 @@ const Footer = () => {
   return (
     <>
       <MainFooter>
-        <Footer1 style={{ marginLeft: -80 }}>
+        <Footer1 style={{ marginLeft: -80, marginRight: 80 }}>
           <LogoImg src={Logo}></LogoImg>
           <Name>RRM - Acoustic Foams</Name>
         </Footer1>
-        <Vert />
+        
         <Footer1 style={{ marginBottom: 40 }}>
           <FooterHeading>Explore</FooterHeading>
           <Container>
@@ -27,7 +27,7 @@ const Footer = () => {
             </Link>
           </Container>
         </Footer1>
-        <Vert />
+        
 
         <Footer1>
           <FooterHeading>Find</FooterHeading>
@@ -47,7 +47,7 @@ const Footer = () => {
             </Link>
           </Container>
         </Footer1>
-        <Vert></Vert>
+        
         <Footer1 style={{ marginBottom: 40 }}>
           <FooterHeading>Places</FooterHeading>
           <Container>
@@ -71,6 +71,7 @@ const MainFooter = styled(Box)`
   display: flex;
   color: #fff;
   width: 100%;
+  letter-spacing: 2px;
   height: 350px;
   justify-content: space-evenly;
   background-color: #000000;
@@ -83,21 +84,23 @@ const MainFooter = styled(Box)`
 const Footer1 = styled(Box)`
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto Slab', serif;
+
   justify-content: center;
   align-items: center;
 
   .link {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
   }
 `;
 
-const Vert = styled(Box)`
-  border-left: 1px dashed #fff;
-  height: 300px;
-  margin-top: 25px;
-`;
+// const Vert = styled(Box)`
+//   border-left: 1px dashed #fff;
+//   height: 300px;
+//   margin-top: 25px;
+// `;
 
 const Container = styled(Box)`
   display: flex;
@@ -113,12 +116,16 @@ const Container = styled(Box)`
 const Name = styled(Box)`
   margin-top: -45px;
   margin-bottom: 45px;
+  font-family: 'Roboto Slab', serif;
+
   font-size: 35px;
   font-family: "Merienda", cursive;
 `;
 
 const FooterHeading = styled(Box)`
-  font-size: 50px;
+  font-size: 30px;
+  font-family: 'Roboto Slab', serif;
+
   margin-bottom: 10px;
 `;
 
