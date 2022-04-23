@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Box,  Img } from "../../utils";
+import { Box, Img } from "../../utils";
 import Logo from "../../assets/images/mainLogo.png";
 import { Link } from "react-router-dom";
 
@@ -10,10 +10,10 @@ const Footer = () => {
       <MainFooter>
         <Footer1 style={{ marginLeft: -80, marginRight: 80 }}>
           <LogoImg src={Logo}></LogoImg>
-          <Name>RRM - Acoustic Foams</Name>
+          <Name>RRM Acoustic Foams</Name>
         </Footer1>
-        
-        <Footer1 style={{ marginBottom: 40 }}>
+
+        <Footer1 style={{ marginBottom: 30 }}>
           <FooterHeading>Explore</FooterHeading>
           <Container>
             <Link className="link hoverBorder" to="/">
@@ -27,10 +27,9 @@ const Footer = () => {
             </Link>
           </Container>
         </Footer1>
-        
 
         <Footer1>
-          <FooterHeading>Find</FooterHeading>
+          <FooterHeading>Products</FooterHeading>
 
           <Container>
             <Link className="link hoverBorder" to="/">
@@ -47,8 +46,8 @@ const Footer = () => {
             </Link>
           </Container>
         </Footer1>
-        
-        <Footer1 style={{ marginBottom: 40 }}>
+
+        <Footer1 style={{ marginBottom: 30 }}>
           <FooterHeading>Places</FooterHeading>
           <Container>
             <Link className="link hoverBorder" to="/">
@@ -84,7 +83,7 @@ const MainFooter = styled(Box)`
 const Footer1 = styled(Box)`
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 
   justify-content: center;
   align-items: center;
@@ -115,16 +114,21 @@ const Container = styled(Box)`
 
 const Name = styled(Box)`
   margin-top: -45px;
-  margin-bottom: 45px;
-  font-family: 'Roboto Slab', serif;
+  margin-bottom: 60px;
+  font-family: "Deutsch-Gotisch Heavy", sans-serif;
+  font-family: "Deutsch-Gotisch Outline", sans-serif;
+  font-family: "Deutsch-Gotisch Shadow", sans-serif;
+  font-family: "Deutsch-Gotisch", sans-serif;
+
+  /* font-family: "Deutsch-Gotisch", sans-serif; */
 
   font-size: 35px;
-  font-family: "Merienda", cursive;
+  /* font-family: "Merienda", cursive; */
 `;
 
 const FooterHeading = styled(Box)`
   font-size: 30px;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
 
   margin-bottom: 10px;
 `;

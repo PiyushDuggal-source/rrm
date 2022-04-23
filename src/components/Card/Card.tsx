@@ -1,32 +1,50 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
-export default function ImgMediaCard() {
+type Foam = {
+  prop: {
+    name: string;
+    image: string;
+    info: string;
+  };
+};
+
+export default function ImgMediaCard(prop: Foam) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: "100%" }}>
       <CardMedia
         component="img"
         alt="green iguana"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+        height="300"
+        image={prop.prop.image}
       />
-      <CardContent>
+      <CardContent sx={{ color: "#fff ", bgcolor: "red" }}>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {prop.prop.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography
+          sx={{ color: "#fff " }}
+          variant="body2"
+          color="text.secondary"
+        >
+          <ul>
+            <li>Size</li>
+            <li>Size</li>
+            <li>Size</li>
+            <li>Size</li>
+          </ul>
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+      <CardActions
+        sx={{ display: "flex", justifyContent: "center", bgcolor: "red" }}
+      >
+        <Button sx={{ color: "#fff " }} size="medium">
+          Buy Now!
+        </Button>
       </CardActions>
     </Card>
   );

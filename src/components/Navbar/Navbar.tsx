@@ -3,10 +3,13 @@ import { Box, Img } from "../../utils";
 import Logo from "../../assets/images/mainLogo.png";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-  console.log(isMobile);
+  useEffect(() => {
+    console.log(window.location.pathname);
+  }, []);
   return (
     <Nav>
       <Link to="/">
@@ -58,6 +61,7 @@ const Navbar = () => {
 const Nav = styled(Box)`
   width: 100%;
   display: flex;
+  font-weight: 400;
   background-color: #000000;
   align-items: center;
   padding: 0 2rem;

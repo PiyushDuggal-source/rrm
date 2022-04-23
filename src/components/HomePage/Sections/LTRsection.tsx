@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Box, H1, Img } from "../../../utils";
+import Foam1 from "../../../assets/images/foam1.jpeg";
+import { Link } from "react-router-dom";
 
 const LTRsection = () => {
   return (
@@ -13,10 +15,16 @@ const LTRsection = () => {
               grow fast. Engage your client through compelling visual that do
               most of the marketing for you.
             </>
+            <Box className="button">
+              <Link to="/1.5Inch">
+                Check It Out{" "}
+                <i className="fa-solid fa-arrow-right-to-bracket"></i>
+              </Link>
+            </Box>
           </Container>
         </Section1>
         <Section2>
-          <SecImg src="https://i.ibb.co/D79rDCW/egg.jpg"></SecImg>
+          <SecImg src="https://www.soundproofingtips.com/wp-content/uploads/2019/09/Best-Acoustic-Foam-Panels-Cover-1500.jpg"></SecImg>
         </Section2>
       </Section>
     </>
@@ -27,6 +35,7 @@ const Section = styled(Box)`
   display: flex;
   flex: 1;
   height: 500px;
+  color: #fff;
 
   @media (max-width: 600px) {
     display: flex;
@@ -47,6 +56,19 @@ const Section1 = styled(Box)`
 
 const Container = styled(Box)`
   width: 70%;
+  font-size: 18px;
+  .button {
+    margin: 1rem 0;
+    font-size: 25px;
+    transition: transform 250ms ease-in-out;
+  }
+  .button > * {
+    color: #fff;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const SecImg = styled(Img)`
