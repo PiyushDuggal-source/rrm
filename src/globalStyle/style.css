@@ -4,10 +4,15 @@
 }
 
 * {
-  /* font-family: "Times New Roman", sans-serif;
-  */
+  /* FIRST */
+  /* font-family: "Merienda", cursive; */
 
-  font-family: "Merriweather", serif;
+  /* SECOND */
+  font-family: "Source Code Pro", monospace;
+  letter-spacing: -0.2mm;
+
+  /* THIRD */
+  /* font-family: "Merriweather", serif; */
 }
 
 .hoverBorder:hover {

@@ -1,22 +1,24 @@
 import styled from "styled-components";
 import { Box, H1, Img } from "../../../utils";
-import Foam1 from "../../../assets/images/foam1.jpeg";
 import { Link } from "react-router-dom";
 
-const LTRsection = () => {
+export interface SectionType {
+  heading: string;
+  body: string;
+  link: string;
+  img: string;
+}
+
+const LTRsection = (prop: SectionType) => {
   return (
     <>
       <Section>
         <Section1 id="1.5inch">
           <Container>
-            <Heading>Transform your Brand</Heading>
-            <>
-              we are full-service creative agency specializing in helping brands
-              grow fast. Engage your client through compelling visual that do
-              most of the marketing for you.
-            </>
+            <Heading>{prop.heading}</Heading>
+            <>{prop.body}</>
             <Box className="button">
-              <Link to="/1.5Inch">
+              <Link to={prop.link}>
                 Check It Out{" "}
                 <i className="fa-solid fa-arrow-right-to-bracket"></i>
               </Link>
@@ -24,7 +26,7 @@ const LTRsection = () => {
           </Container>
         </Section1>
         <Section2>
-          <SecImg src="https://www.soundproofingtips.com/wp-content/uploads/2019/09/Best-Acoustic-Foam-Panels-Cover-1500.jpg"></SecImg>
+          <SecImg src={prop.img}></SecImg>
         </Section2>
       </Section>
     </>

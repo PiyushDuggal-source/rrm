@@ -1,14 +1,15 @@
-import React from "react";
 import styled from "styled-components";
 import { Box, Img } from "../../utils";
 import Logo from "../../assets/images/mainLogo.png";
 import { Link } from "react-router-dom";
+import useMatchMedia from "../../hooks/useMatchMedia";
 
 const Footer = () => {
+  const toggle600 = useMatchMedia();
   return (
     <>
       <MainFooter>
-        <Footer1 style={{ marginLeft: -80, marginRight: 80 }}>
+        <Footer1 style={toggle600 ? {} : { marginLeft: -80, marginRight: 80 }}>
           <LogoImg src={Logo}></LogoImg>
           <Name>RRM Acoustic Foams</Name>
         </Footer1>
@@ -28,7 +29,7 @@ const Footer = () => {
           </Container>
         </Footer1>
 
-        <Footer1>
+        <Footer1 style={toggle600 ? { marginBottom: 30 } : {}}>
           <FooterHeading>Products</FooterHeading>
 
           <Container>
@@ -93,6 +94,13 @@ const Footer1 = styled(Box)`
     font-size: 20px;
     color: #fff;
   }
+
+  @media (max-width: 600px) {
+    .link {
+      margin: 0 0.5rem;
+      font-size: 16px;
+    }
+  }
 `;
 
 // const Vert = styled(Box)`
@@ -120,17 +128,20 @@ const Name = styled(Box)`
   font-family: "Deutsch-Gotisch Shadow", sans-serif;
   font-family: "Deutsch-Gotisch", sans-serif;
 
-  /* font-family: "Deutsch-Gotisch", sans-serif; */
-
   font-size: 35px;
-  /* font-family: "Merienda", cursive; */
+
+  @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const FooterHeading = styled(Box)`
   font-size: 30px;
-  font-family: "Roboto Slab", serif;
-
   margin-bottom: 10px;
+
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 const LogoImg = styled(Img)`
@@ -138,7 +149,8 @@ const LogoImg = styled(Img)`
   margin: 2rem;
   border-radius: 50%;
   @media (max-width: 700px) {
-    width: 95px;
+    width: 180px;
+    margin: 1rem 2rem 2rem 2rem;
   }
 `;
 

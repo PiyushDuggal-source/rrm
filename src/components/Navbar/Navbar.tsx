@@ -16,7 +16,7 @@ const Navbar = () => {
         <LogoImg src={Logo}></LogoImg>
       </Link>
       <Box className="itemSelector">
-        <Box className="inchFoams">
+        {/* <Box className="inchFoams">
           <Box
             onClick={() => {
               window.location.href = "#1.5inch";
@@ -33,7 +33,7 @@ const Navbar = () => {
           >
             2.0 Inch Foams
           </Box>
-        </Box>
+        </Box> */}
         <Box className="designs">
           <Box className="hoverBorder design">Pyramid</Box>
           <Box className="hoverBorder design">Turbo</Box>

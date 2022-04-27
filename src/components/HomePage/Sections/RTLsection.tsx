@@ -1,24 +1,21 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, H1, Img } from "../../../utils";
+import { SectionType } from "./LTRsection";
 
-const RTLsection = () => {
+const RTLsection = (prop: SectionType) => {
   return (
     <>
       <Section id="2.0inch">
         <Section2>
-          <SecImg src="https://soundproofacousticsolution.com/wp-content/uploads/2021/08/NeoMax6x3_3.jpg"></SecImg>
+          <SecImg src={prop.img}></SecImg>
         </Section2>
         <Section1>
           <Container>
-            <Heading>Transform your Brand</Heading>
-            <>
-              we are full-service creative agency specializing in helping brands
-              grow fast. Engage your client through compelling visual that do
-              most of the marketing for you.
-            </>
+            <Heading>{prop.heading}</Heading>
+            <>{prop.body}</>
             <Box className="button">
-              <Link to="/1.5Inch">
+              <Link to={prop.link}>
                 Check It Out{" "}
                 <i className="fa-solid fa-arrow-right-to-bracket"></i>
               </Link>
