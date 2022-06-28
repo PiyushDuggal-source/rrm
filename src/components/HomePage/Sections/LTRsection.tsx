@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Box, H1, Img } from "../../../utils";
 import { Link } from "react-router-dom";
-
+import useMatchMedia from "../../../hooks/useMatchMedia";
 export interface SectionType {
   heading: string;
   body: string;
@@ -10,6 +10,7 @@ export interface SectionType {
 }
 
 const LTRsection = (prop: SectionType) => {
+  const toggle600 = useMatchMedia();
   return (
     <>
       <Section>
@@ -17,7 +18,7 @@ const LTRsection = (prop: SectionType) => {
           <Container>
             <Heading>{prop.heading}</Heading>
             <>{prop.body}</>
-            <Box className="button">
+            <Box className={toggle600 ? "button_m" : "button"}>
               <Link to={prop.link}>
                 Check It Out{" "}
                 <i className="fa-solid fa-arrow-right-to-bracket"></i>
@@ -26,7 +27,7 @@ const LTRsection = (prop: SectionType) => {
           </Container>
         </Section1>
         <Section2>
-          <SecImg src={prop.img}></SecImg>
+          <SecImg src={prop.img} height={"450px"}></SecImg>
         </Section2>
       </Section>
     </>
@@ -60,12 +61,28 @@ const Container = styled(Box)`
   width: 70%;
   font-size: 18px;
   .button {
-    margin: 1rem 0;
+    margin: 4rem 0 1rem 0;
     font-size: 25px;
     transition: transform 250ms ease-in-out;
   }
   .button > * {
+    border-radius: 4px;
+    border: 2px solid #fff;
+    background-color: red;
+    padding: 8px 14px;
+    text-decoration: none;
     color: #fff;
+  }
+  .button_m {
+    margin: 15px 10px 10px 0;
+  }
+  .button_m > * {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    background-color: red;
+    border: 2px solid #fff;
   }
 
   .button:hover {

@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImgCrousel from "./HeroImgCrousel/HeroImgCrousel";
 import LTRsection from "./Sections/LTRsection";
-import Pyramid from "../../assets/images/pyramid.jpg";
+import Pyramid from "../../assets/images/Pyramid.jpg";
 import Wedge from "../../assets/images/wedge.jpg";
 import BassTrap from "../../assets/images/bass-trap.jpg";
 import Turbo from "../../assets/images/turbo.jpg";
@@ -11,22 +11,22 @@ const HomePage = () => {
     <>
       <HeroImgCrousel />
       <LTRsection
-        heading={"Pyramid Foams"}
+        heading={"All Pyramid Foams"}
         body={
           "lorem ipsom dolor sit, jdfd kdfj fefeaflkj sf askfe fj sdlfkj e fsef"
         }
-        link={"/1.5inch"}
-        img={
-          "https://www.auralexchange.com/wp-content/uploads/2018/08/NeoMax6x3_1.jpg"
-        }
-        // img={Pyramid}
+        link={"/pyramid"}
+        // img={
+        //   "https://www.auralexchange.com/wp-content/uploads/2018/08/NeoMax6x3_1.jpg"
+        // }
+        img={Pyramid}
       />
       <RTLsection
         heading={"Turbo Foams"}
         body={
           "lorem ipsom dolor sit, jdfd kdfj fefeaflkj sf askfe fj sdlfkj e fsef"
         }
-        link={""}
+        link={"/pyramid"}
         img={
           "https://cdn.shopify.com/s/files/1/0067/8078/0634/products/TurboXW_5154ce3e-7bc8-4e1d-a17c-b1d85f515839_900x.jpg?v=1624342298"
         }
@@ -37,7 +37,7 @@ const HomePage = () => {
         body={
           "lorem ipsom dolor sit, jdfd kdfj fefeaflkj sf askfe fj sdlfkj e fsef"
         }
-        link={"/1.5inch"}
+        link={""}
         img={
           "https://cdn.shopify.com/s/files/1/1304/2531/products/Acoustic_Wedge_Foam_1445x.jpg?v=1592018927"
         }

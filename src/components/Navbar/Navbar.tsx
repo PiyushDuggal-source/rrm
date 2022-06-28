@@ -35,10 +35,18 @@ const Navbar = () => {
           </Box>
         </Box> */}
         <Box className="designs">
-          <Box className="hoverBorder design">Pyramid</Box>
-          <Box className="hoverBorder design">Turbo</Box>
-          <Box className="hoverBorder design">Wedge</Box>
-          <Box className="hoverBorder design">Egg</Box>
+          <Link className=" link navItems" to="/pyramid">
+            <Box className="hoverBorder design">Pyramid</Box>
+          </Link>
+          <Link className=" link navItems" to="/turbo">
+            <Box className="hoverBorder design">Turbo</Box>
+          </Link>
+          <Link className=" link navItems" to="/wedge">
+            <Box className="hoverBorder design">Wedge</Box>
+          </Link>
+          <Link className=" link navItems" to="/egg">
+            <Box className="hoverBorder design">Egg</Box>
+          </Link>
         </Box>
       </Box>
       <Box>
@@ -69,6 +77,9 @@ const Nav = styled(Box)`
   justify-content: space-between;
   height: 160px;
 
+  .link {
+    text-decoration: none;
+  }
   @media (max-width: 600px) {
     flex-direction: column;
     padding: 0 0 1rem 0;

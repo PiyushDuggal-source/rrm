@@ -50,16 +50,48 @@ const Section1 = styled(Box)`
   }
 `;
 
+// const Container = styled(Box)`
+//   width: 70%;
+//   font-size: 18px;
+//   .button {
+//     margin: 1rem 0;
+//     font-size: 25px;
+//     transition: transform 250ms ease-in-out;
+//   }
+//   .button > * {
+//     color: #fff;
+//   }
+
+//   .button:hover {
+//     transform: scale(1.05);
+//   }
+// `;
 const Container = styled(Box)`
   width: 70%;
   font-size: 18px;
   .button {
-    margin: 1rem 0;
+    margin: 4rem 0 1rem 0;
     font-size: 25px;
     transition: transform 250ms ease-in-out;
   }
   .button > * {
+    border-radius: 4px;
+    border: 2px solid #fff;
+    background-color: red;
+    padding: 8px 14px;
+    text-decoration: none;
     color: #fff;
+  }
+  .button_m {
+    margin: 15px 10px 10px 0;
+  }
+  .button_m > * {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    background-color: red;
+    border: 2px solid #fff;
   }
 
   .button:hover {

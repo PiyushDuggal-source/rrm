@@ -4,39 +4,69 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import useMatchMedia from "../../hooks/useMatchMedia";
 
-type Foam = {
+export type Foam = {
   prop: {
     name: string;
-    image: string;
-    info: string;
+    imageM: string;
+    density: string;
+    size: string;
+    price: string;
+    color: string;
+    height: string;
+    imageW: string;
   };
 };
 
 export default function ImgMediaCard(prop: Foam) {
+  const toggle600 = useMatchMedia();
   return (
     <Card sx={{ width: "100%" }}>
       <CardMedia
         component="img"
         alt="green iguana"
-        height="300"
-        image={prop.prop.image}
+        src={toggle600 ? prop.prop.imageM : prop.prop.imageW}
       />
-      <CardContent sx={{ color: "#fff ", bgcolor: "red" }}>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent
+        sx={{
+          color: "#fff ",
+          bgcolor: "red",
+        }}
+      >
+        <Typography
+          gutterBottom
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+          variant="h5"
+          component="div"
+        >
           {prop.prop.name}
         </Typography>
         <Typography
-          sx={{ color: "#fff " }}
+          fontWeight="bold"
           variant="body2"
+          sx={{
+            lineHeight: "0.6",
+            color: "#fff ",
+            fontSize: toggle600 ? "14px" : "16px",
+            display: "flex",
+            alignItems: "center",
+            marginTop: "20px",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
           color="text.secondary"
         >
-          <ul>
-            <li>Size</li>
-            <li>Size</li>
-            <li>Size</li>
-            <li>Size</li>
-          </ul>
+          <div>
+            <p>Size &nbsp;&nbsp;&nbsp;: &nbsp;{prop.prop.size}</p>
+            <p>Height &nbsp;: {prop.prop.height}</p>
+            <p>Density : {prop.prop.density}</p>
+            <p>Color &nbsp;&nbsp;: {prop.prop.color}</p>
+            <p style={{ fontSize: 20 }}>{`Price : ${prop.prop.price}`}</p>
+          </div>
         </Typography>
       </CardContent>
       <CardActions
