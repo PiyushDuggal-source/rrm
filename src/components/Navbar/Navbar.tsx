@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Link to="/">
-        <LogoImg src={Logo}></LogoImg>
+        <LogoImg src={Logo} style={{}}></LogoImg>
       </Link>
       <Box className="itemSelector">
         {/* <Box className="inchFoams">
