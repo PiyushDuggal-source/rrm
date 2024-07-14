@@ -1,39 +1,39 @@
-import pyramid1_1 from "../images/Pyramid1_1.JPG";
-import pyramid1_2 from "../images/Pyramid1_2.JPG";
-import pyramid1_3 from "../images/Pyramid1_3.JPG";
-import pyramid1_4 from "../images/Pyramid1_4.JPG";
-import pyramid1_5 from "../images/Pyramid1_5.JPG";
+import pyramid1_1 from "../images/Pyramid1_1.webp";
+import pyramid1_2 from "../images/Pyramid1_2.webp";
+import pyramid1_3 from "../images/Pyramid1_3.webp";
+import pyramid1_4 from "../images/Pyramid1_4.webp";
+import pyramid1_5 from "../images/Pyramid1_5.webp";
 
-import pyramid2_1 from "../images/Pyramid2_1.JPG";
-import pyramid2_2 from "../images/Pyramid2_2.JPG";
-import pyramid2_3 from "../images/Pyramid2_3.JPG";
+import pyramid2_1 from "../images/Pyramid2_1.webp";
+import pyramid2_2 from "../images/Pyramid2_2.webp";
+import pyramid2_3 from "../images/Pyramid2_3.webp";
 
-import pyramid3_1 from "../images/Pyramid3_1.JPG";
-import pyramid3_2 from "../images/pyramid3_2.JPG";
-import pyramid3_3 from "../images/pyramid3_3.JPG";
-import pyramid3_4 from "../images/pyramid3_4.JPG";
+import pyramid3_1 from "../images/Pyramid3_1.webp";
+import pyramid3_2 from "../images/pyramid3_2.webp";
+import pyramid3_3 from "../images/pyramid3_3.webp";
+import pyramid3_4 from "../images/pyramid3_4.webp";
 
-import pyramid4_1 from "../images/Pyramid4_1.JPG";
-import pyramid4_2 from "../images/Pyramid4_2.JPG";
-import pyramid4_3 from "../images/Pyramid4_3.JPG";
-import pyramid4_4 from "../images/Pyramid4_4.JPG";
-import pyramid4_5 from "../images/Pyramid4_5.JPG";
+import pyramid4_1 from "../images/Pyramid4_1.webp";
+import pyramid4_2 from "../images/Pyramid4_2.webp";
+import pyramid4_3 from "../images/Pyramid4_3.webp";
+import pyramid4_4 from "../images/Pyramid4_4.webp";
+import pyramid4_5 from "../images/Pyramid4_5.webp";
 
-import pyramid5_1 from "../images/Pyramid5_1.JPG";
-import pyramid5_2 from "../images/Pyramid5_2.JPG";
-import pyramid5_3 from "../images/Pyramid5_3.JPG";
-import pyramid5_4 from "../images/Pyramid5_4.JPG";
-import pyramid5_5 from "../images/Pyramid5_5.JPG";
+import pyramid5_1 from "../images/Pyramid5_1.webp";
+import pyramid5_2 from "../images/Pyramid5_2.webp";
+import pyramid5_3 from "../images/Pyramid5_3.webp";
+import pyramid5_4 from "../images/Pyramid5_4.webp";
+import pyramid5_5 from "../images/Pyramid5_5.webp";
 
-import pyramid6_1 from "../images/Pyramid6_1.JPG";
-import pyramid6_2 from "../images/Pyramid6_2.JPG";
-import pyramid6_3 from "../images/Pyramid6_3.JPG";
-import pyramid6_4 from "../images/Pyramid6_4.JPG";
+import pyramid6_1 from "../images/Pyramid6_1.webp";
+import pyramid6_2 from "../images/Pyramid6_2.webp";
+import pyramid6_3 from "../images/Pyramid6_3.webp";
+import pyramid6_4 from "../images/Pyramid6_4.webp";
 
-import pyramid7_1 from "../images/Pyramid7_1.JPG";
-import pyramid7_2 from "../images/Pyramid7_2.JPG";
-import pyramid7_3 from "../images/Pyramid7_3.JPG";
-import pyramid7_4 from "../images/Pyramid7_4.JPG";
+import pyramid7_1 from "../images/Pyramid7_1.webp";
+import pyramid7_2 from "../images/Pyramid7_2.webp";
+import pyramid7_3 from "../images/Pyramid7_3.webp";
+import pyramid7_4 from "../images/Pyramid7_4.webp";
 
 export const pyramid = [
   {

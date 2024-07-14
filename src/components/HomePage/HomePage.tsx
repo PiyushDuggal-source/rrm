@@ -1,10 +1,10 @@
 import React from "react";
 import HeroImgCrousel from "./HeroImgCrousel/HeroImgCrousel";
 import LTRsection from "./Sections/LTRsection";
-import Pyramid from "../../assets/images/Pyramid.jpg";
-import Wedge from "../../assets/images/wedge.jpg";
-import BassTrap from "../../assets/images/bass-trap.jpg";
-import Turbo from "../../assets/images/turbo.jpg";
+import Pyramid from "../../assets/images/Pyramid.webp";
+import Wedge from "../../assets/images/wedge.webp";
+import BassTrap from "../../assets/images/bass-trap.webp";
+import Turbo from "../../assets/images/turbo.webp";
 import RTLsection from "./Sections/RTLsection";
 const HomePage = () => {
   return (

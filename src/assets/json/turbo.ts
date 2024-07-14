@@ -1,6 +1,6 @@
-import pyramid1M from "../images/pyramid1M.jpg";
-import pyramid1W from "../images/pyramid1Web.jpg";
-import pyramid2W from "../images/pyramid2Web.jpg";
+import pyramid1M from "../images/pyramid1M.webp";
+import pyramid1W from "../images/pyramid1Web.webp";
+import pyramid2W from "../images/pyramid2Web.webp";
 export const turbo = [
   {
     name: "Pyramid Acoustic Foam",

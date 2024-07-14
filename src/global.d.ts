@@ -12,3 +12,7 @@ declare module "*.jpg" {
 declare module "*.JPG" {
   export default "" as string;
 }
+
+declare module "*.webp" {
+  export default "" as string;
+}
