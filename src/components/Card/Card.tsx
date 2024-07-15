@@ -22,13 +22,16 @@ export type Foam = {
     price: string;
     color: string;
     height: string;
-    close?: Function;
   };
 };
 
 export default function ImgMediaCard(prop: Foam) {
   const toggle600 = useMatchMedia();
-  const [showModal, setShowModal] = useState(false);
+
+  let setShowModal:Function;
+  let showModal:boolean;
+  [showModal, setShowModal] = useState(false);
+
   return (
     <Card sx={{ width: "100%", background: "transparent"}}>
       <Swiper
@@ -107,10 +110,9 @@ export default function ImgMediaCard(prop: Foam) {
           Buy Now
         </Button>
       </CardActions>
-      {/*
-        prop.prop.close = ();
-        showModal ? <Modal ></Modal> : <></>
-      */}
+      {
+        showModal ? <Modal {...{ foam: prop.prop, onclose: setShowModal}}></Modal> : <></>
+      }
     </Card>
   );
 }
