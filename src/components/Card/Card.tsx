@@ -35,10 +35,10 @@ export default function ImgMediaCard(prop: Foam) {
   return (
     <Card sx={{ width: "100%", background: "transparent"}}>
       <Swiper
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
         spaceBetween={50}
         pagination={{
           dynamicBullets: true,
@@ -48,7 +48,7 @@ export default function ImgMediaCard(prop: Foam) {
             slidesPerView: 1,
           }
         }}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         loop
       >
         {prop.prop.image.map((img) => (
