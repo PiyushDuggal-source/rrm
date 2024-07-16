@@ -113,7 +113,7 @@ const Bg = styled(Box)`
 
 const Container = styled(Box)`
   width: 90vw;
-  height: 60vh;
+  height: 70vh;
   background: black; 
   border-radius: 16px;
   overflow: hidden;
