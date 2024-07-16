@@ -91,7 +91,7 @@ export default function Modal(props: { foam: Foam, onclose: Function})  {
           </div>
         </Section>
         <Button onClick={ ()=>{ props.onclose() } }
-          style={{background: "transparent", border: "0", width:"60px", height:"60px", borderRadius:"10px", fontSize: "48px", position: "absolute", top: "10px", right: "10px", backgroundColor: "rgba(0,0,0,0.5)", zIndex: "20", display: "flex", alignItems: "center"}}
+          style={{background: "transparent", border: "0", width:"40px", height:"40px", borderRadius:"10px", fontSize: "48px", position: "absolute", top: "10px", right: "10px", backgroundColor: "rgba(0,0,0,0.5)", zIndex: "20", display: "flex", alignItems: "center"}}
         > <IoClose/> </Button>
       </Container>
     </Bg>
@@ -113,7 +113,7 @@ const Bg = styled(Box)`
 
 const Container = styled(Box)`
   width: 90vw;
-  height: 70vh;
+  height: 75vh;
   background: black; 
   border-radius: 16px;
   overflow: hidden;
