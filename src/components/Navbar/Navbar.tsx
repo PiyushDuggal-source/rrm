@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Box, Img } from "../../utils";
-import Logo from "../../assets/images/mainLogo.png";
+import Logo from "../../assets/images/mainLogo.webp";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { useEffect } from "react";
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Link to="/">
-        <LogoImg src={Logo}></LogoImg>
+        <LogoImg src={Logo} style={{}}></LogoImg>
       </Link>
       <Box className="itemSelector">
         {/* <Box className="inchFoams">

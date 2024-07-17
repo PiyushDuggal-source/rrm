@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/esm/Carousel";
-import Hero1 from "../../../assets/images/hero1.png";
-import Hero2 from "../../../assets/images/hero2.png";
+import Hero1 from "../../../assets/images/hero1.webp";
+import Hero2 from "../../../assets/images/hero2.webp";
 import { useMediaQuery } from "react-responsive";
 
 const HeroImgCrousel = () => {

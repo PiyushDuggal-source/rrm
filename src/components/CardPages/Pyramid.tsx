@@ -7,14 +7,12 @@ type Foam = {
   name: string;
   density: string;
   size: string;
-  imageM: string;
+  image: string[];
   price: string;
   color: string;
   height: string;
-  imageW: string;
 };
 const Pyramid = () => {
-  console.log(pyramid);
   return (
     <CardContainer>
       {pyramid.map((ele: Foam, key: any) => {
