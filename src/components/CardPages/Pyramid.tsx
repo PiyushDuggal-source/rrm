@@ -2,22 +2,14 @@ import styled from "styled-components";
 import { Box } from "../../utils";
 import Card from "../Card/Card";
 import { pyramid } from "../../assets/json/pyramid";
+import { Foam } from "../../types";
 
-type Foam = {
-  name: string;
-  density: string;
-  size: string;
-  image: string[];
-  price: string;
-  color: string;
-  height: string;
-};
 const Pyramid = () => {
   return (
     <CardContainer>
-      {pyramid.map((ele: Foam, key: any) => {
-        return <Card key={key} prop={ele} />;
-      })}
+      {pyramid.map((ele: Foam, key: any) => (
+        <Card prop={ele} key={key} />
+      ))}
     </CardContainer>
   );
 };

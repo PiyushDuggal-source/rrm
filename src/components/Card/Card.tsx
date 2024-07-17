@@ -10,35 +10,22 @@ import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import Modal from "./Modal";
+import { Foam } from "../../types";
 
-export type Foam = {
-  prop: {
-    name: string;
-    image: string[];
-    density: string;
-    size: string;
-    price: string;
-    color: string;
-    height: string;
-  };
+type Props = {
+  prop: Foam;
 };
 
-export default function ImgMediaCard(prop: Foam) {
+export default function ImgMediaCard({ prop }: Props) {
   const toggle600 = useMatchMedia();
 
-  let setShowModal:Function;
-  let showModal:boolean;
-  [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <Card sx={{ width: "100%", background: "transparent"}}>
+    <Card sx={{ width: "100%", background: "transparent" }}>
       <Swiper
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: false,
-        // }}
         spaceBetween={50}
         pagination={{
           dynamicBullets: true,
@@ -46,21 +33,16 @@ export default function ImgMediaCard(prop: Foam) {
         breakpoints={{
           640: {
             slidesPerView: 1,
-          }
+          },
         }}
         modules={[Pagination]}
         loop
       >
-        {prop.prop.image.map((img) => (
-          <SwiperSlide>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              src={ img }
-            />
+        {prop.images.map((img, index) => (
+          <SwiperSlide key={index}>
+            <CardMedia component="img" alt="green iguana" src={img} />
           </SwiperSlide>
         ))}
-        
       </Swiper>
       <CardContent
         sx={{
@@ -77,7 +59,7 @@ export default function ImgMediaCard(prop: Foam) {
           variant="h5"
           component="div"
         >
-          {prop.prop.name}
+          {prop.name}
         </Typography>
         <Typography
           fontWeight="bold"
@@ -95,24 +77,37 @@ export default function ImgMediaCard(prop: Foam) {
           color="text.secondary"
         >
           <div>
-            <p>Size &nbsp;&nbsp;&nbsp;: &nbsp;{prop.prop.size}</p>
-            <p>Height &nbsp;: {prop.prop.height}</p>
-            <p>Density : {prop.prop.density}</p>
-            <p>Color &nbsp;&nbsp;: {prop.prop.color}</p>
-            <p style={{ fontSize: 20 }}>Price : &#8377;{ prop.prop.price }</p>
+            <p>Size &nbsp;&nbsp;&nbsp;: &nbsp;{prop.size}</p>
+            <p>Height &nbsp;: {prop.height}</p>
+            <p>Density : {prop.density}</p>
+            <p>Color &nbsp;&nbsp;: {prop.color}</p>
+            <p style={{ fontSize: 20 }}>Price : &#8377;{prop.price}</p>
           </div>
         </Typography>
       </CardContent>
       <CardActions
-        sx={{ display: "flex", justifyContent: "center", bgcolor: "rgba(255, 0, 0, 0.7)", cursor: "pointer",}}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          bgcolor: "rgba(255, 0, 0, 0.7)",
+          cursor: "pointer",
+        }}
       >
-        <Button sx={{ color: "#fff ", height: '40px', width : '400px'}} size="large" onClick={ () => {setShowModal(true)} }>
+        <Button
+          sx={{ color: "#fff ", height: "40px", width: "400px" }}
+          size="large"
+          onClick={() => {
+            setShowModal(true);
+          }}
+        >
           Buy Now
         </Button>
       </CardActions>
-      {
-        showModal ? <Modal {...{ foam: prop.prop, onclose: setShowModal}}></Modal> : <></>
-      }
+      {showModal ? (
+        <Modal {...{ foam: prop, onclose: setShowModal }}></Modal>
+      ) : (
+        <></>
+      )}
     </Card>
   );
 }

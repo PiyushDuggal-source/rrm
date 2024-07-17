@@ -2,16 +2,8 @@ import styled from "styled-components";
 import { Box } from "../../utils";
 import Card from "../Card/Card";
 import { turbo } from "../../assets/json/turbo";
+import { Foam } from "../../types";
 
-type Foam = {
-  name: string;
-  density: string;
-  size: string;
-  image: string[];
-  price: string;
-  color: string;
-  height: string;
-};
 const Trubo = () => {
   return (
     <CardContainer>

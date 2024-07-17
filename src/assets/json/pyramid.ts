@@ -38,7 +38,7 @@ import pyramid7_4 from "../images/Pyramid7_4.webp";
 export const pyramid = [
   {
     name: "Pyramid Acoustic Foam Black",
-    image: [pyramid1_1, pyramid1_2, pyramid1_3, pyramid1_4, pyramid1_5],
+    images: [pyramid1_1, pyramid1_2, pyramid1_3, pyramid1_4, pyramid1_5],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
@@ -47,7 +47,7 @@ export const pyramid = [
   },
   {
     name: "Pyramid Acoustic Foam Red",
-    image: [pyramid2_1, pyramid2_2, pyramid2_3],
+    images: [pyramid2_1, pyramid2_2, pyramid2_3],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
@@ -56,7 +56,7 @@ export const pyramid = [
   },
   {
     name: "Pyramid Acoustic Foam Deep Red",
-    image: [pyramid3_1, pyramid3_2, pyramid3_3, pyramid3_4],
+    images: [pyramid3_1, pyramid3_2, pyramid3_3, pyramid3_4],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
@@ -65,7 +65,7 @@ export const pyramid = [
   },
   {
     name: "Pyramid Acoustic Foam Yellow",
-    image: [pyramid4_1, pyramid4_2, pyramid4_3, pyramid4_4, pyramid4_5],
+    images: [pyramid4_1, pyramid4_2, pyramid4_3, pyramid4_4, pyramid4_5],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
@@ -74,7 +74,7 @@ export const pyramid = [
   },
   {
     name: "Pyramid Acoustic Foam Blue",
-    image: [pyramid5_1, pyramid5_2, pyramid5_3, pyramid5_4, pyramid5_5],
+    images: [pyramid5_1, pyramid5_2, pyramid5_3, pyramid5_4, pyramid5_5],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
@@ -83,7 +83,7 @@ export const pyramid = [
   },
   {
     name: "Pyramid Acoustic Foam Purple",
-    image: [pyramid6_1, pyramid6_2, pyramid6_3, pyramid6_4],
+    images: [pyramid6_1, pyramid6_2, pyramid6_3, pyramid6_4],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
@@ -92,7 +92,7 @@ export const pyramid = [
   },
   {
     name: "Pyramid Acoustic Foam Pink",
-    image: [pyramid7_1, pyramid7_2, pyramid7_3, pyramid7_4],
+    images: [pyramid7_1, pyramid7_2, pyramid7_3, pyramid7_4],
     size: "1x1 ft.",
     color: "Gray - Black",
     density: "32D",
