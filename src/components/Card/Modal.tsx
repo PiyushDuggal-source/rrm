@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Box } from "../../utils";
+import { Box, Img } from "../../utils";
 import { Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
+import { MdOutlineZoomOutMap } from "react-icons/md"
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -9,6 +10,9 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import useMatchMedia from "../../hooks/useMatchMedia";
 import { Foam } from "../../types";
+
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 export default function Modal(props: { foam: Foam; onclose: Function }) {
   const toggle600 = useMatchMedia();
@@ -53,15 +57,12 @@ export default function Modal(props: { foam: Foam; onclose: Function }) {
         >
           {props.foam.images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img
-                alt={props.foam.name}
-                src={img}
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
+              <Zoom>
+                <ModalImage
+                  alt={props.foam.name}
+                  src={img}
+                />
+              </Zoom>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -117,14 +118,35 @@ export default function Modal(props: { foam: Foam; onclose: Function }) {
           </div>
         </Section>
         <Button
+          style={{
+            background: "transparent",
+            border: "0",
+            width: "50px",
+            height: "50px",
+            borderRadius: "10px",
+            fontSize: "48px",
+            position: "absolute",
+            top: "10px",
+            left: "10px",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            zIndex: "20",
+            display: "flex",
+            alignItems: "center",
+            pointerEvents: "none",
+          }}
+        >
+          {" "}
+          <MdOutlineZoomOutMap />{" "}
+        </Button>
+        <Button
           onClick={() => {
             props.onclose();
           }}
           style={{
             background: "transparent",
             border: "0",
-            width: "40px",
-            height: "40px",
+            width: "50px",
+            height: "50px",
             borderRadius: "10px",
             fontSize: "48px",
             position: "absolute",
@@ -193,3 +215,21 @@ const Section = styled(Box)`
     width: auto;
   }
 `;
+
+const ModalImage = styled(Img)`
+  height: 70vh;
+  width: 45vw;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1;
+    @media (min-width: 600px) {
+    width: 37.5vw;
+    height: 75vh;
+  }
+
+  @media (min-width: 900px) {
+    width: 30vw;
+    height: 75vh;
+  }
+`
