@@ -218,17 +218,18 @@ const Section = styled(Box)`
 
 const ModalImage = styled(Img)`
   height: 70vh;
+  width: 45vw;
   width: 100%;
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1;
     @media (min-width: 600px) {
-    width: 75vw;
+    width: 37.5vw;
     height: 75vh;
   }
 
   @media (min-width: 900px) {
-    width: 60vw;
+    width: 30vw;
     height: 75vh;
   }
 `
