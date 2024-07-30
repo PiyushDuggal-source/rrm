@@ -1,55 +1,70 @@
 import styled from "styled-components";
 import { Box, Img } from "../../utils";
-import Logo from "../../assets/images/mainLogo.webp";
+import logo from "../../assets/images/mainLogo.webp";
 import { Link } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
-import { useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
-  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-  useEffect(() => {
-    console.log(window.location.pathname);
-  }, []);
+  const [open, setOpen] = useState(false);
+
   return (
-    <Nav>
+    <div className="w-full pb-2 flex flex-col md:flex-row mx-auto bg-black items-center justify-between">
       <Link to="/">
-        <LogoImg src={Logo} style={{}}></LogoImg>
+        <img
+          src={logo}
+          className="w-[100px] h-[100px] md:w-[150px] md:h-[150px]"
+          alt="logo"
+        />
       </Link>
-      <Box className="itemSelector">
-        {/* <Box className="inchFoams">
-          <Box
-            onClick={() => {
-              window.location.href = "#1.5inch";
-            }}
-            className="hoverBorder foam"
-          >
-            1.5 Inch Foams
-          </Box>
-          <Box
-            className="hoverBorder foam"
-            onClick={() => {
-              window.location.href = "#2.0inch";
-            }}
-          >
-            2.0 Inch Foams
-          </Box>
-        </Box> */}
-        <Box className="designs">
-          <Link className=" link navItems" to="/pyramid">
-            <Box className="hoverBorder design">Pyramid</Box>
-          </Link>
-          <Link className=" link navItems" to="/turbo">
-            <Box className="hoverBorder design">Turbo</Box>
-          </Link>
-          <Link className=" link navItems" to="/wedge">
-            <Box className="hoverBorder design">Wedge</Box>
-          </Link>
-          <Link className=" link navItems" to="/egg">
-            <Box className="hoverBorder design">Egg</Box>
-          </Link>
-        </Box>
-      </Box>
-      <Box>
+      <div className="flex md:hidden group relative cursor-pointer py-2">
+        <select className="z-50 flex w-full flex-col py-2 px-4 text-white bg-black shadow-xl group-hover:visible">
+          <option className="my-2 block border-b rounded-md border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Sunday
+          </option>
+
+          <option className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Monday
+          </option>
+
+          <option className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Tuesday
+          </option>
+
+          <option className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Wednesday
+          </option>
+
+          <option className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Thursday
+          </option>
+
+          <option className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Friday
+          </option>
+
+          <option className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+            Saturday
+          </option>
+        </select>
+      </div>
+      <div className="hidden md:flex items-center gap-2 text-white">
+        <Link className="" to="/pyramid">
+          <span className="hoverBorder">Pyramid Acoustic Foams</span>
+        </Link>
+        <span className="mx-1">|</span>
+        <Link className=" link navItems" to="/turbo">
+          <span className="hoverBorder">Turbo</span>
+        </Link>
+        <span className="mx-1">|</span>
+        <Link className=" link navItems" to="/wedge">
+          <span className="hoverBorder">Wedge</span>
+        </Link>
+        <span className="mx-1">|</span>
+        <Link className=" link navItems" to="/egg">
+          <span className="hoverBorder">Egg</span>
+        </Link>
+      </div>
+      <div>
         <NavItems>
           <Link className="hoverBorder navItems" to="/">
             Home
@@ -61,8 +76,8 @@ const Navbar = () => {
             Contact
           </Link>
         </NavItems>
-      </Box>
-    </Nav>
+      </div>
+    </div>
   );
 };
 
